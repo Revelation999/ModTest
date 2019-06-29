@@ -1,6 +1,9 @@
 package edu.bc.testmod;
 
+import net.minecraft.item.Item;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -32,6 +35,18 @@ public interface IProxy
      * @param event the event
      */
     void serverStarting(FMLServerStartingEvent event);
+    
+    /**
+    *
+    * @param event the event
+    */
+    void RegisterBlocks(RegistryEvent.Register<Block> event);
+    
+    /**
+    *
+    * @param event the event
+    */
+    void RegisterItems(RegistryEvent.Register<Item> event);
 
 
     /**

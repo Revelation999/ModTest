@@ -1,7 +1,10 @@
 package edu.bc.testmod;
 
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -38,6 +41,19 @@ public class ClientProxy implements IProxy {
 	public EntityPlayer getPlayerEntityFromContext(MessageContext ctx) {
 		// TODO Auto-generated method stub
 		return ctx.side.isClient() ? Minecraft.getMinecraft().player : TestMod.proxy.getPlayerEntityFromContext(ctx);
+	}
+
+	@Override
+	public void RegisterBlocks(Register<Block> event) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+	@Override
+	public void RegisterItems(Register<Item> event) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
